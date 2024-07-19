@@ -1,0 +1,18 @@
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <!-- {{formValues[0] | json}} -->
+
+    <input type="text" formControlName="_id" [(ngModel)]="formValues[0]['_id']" />
+    <label>Title</label>
+    <input type="text" formControlName="title" [(ngModel)]="formValues[0]['title']" />
+    <label>Isbn</label>
+    <input type="text" formControlName="isbn" [(ngModel)]="formValues[0]['isbn']" />
+    <label>Author</label>
+    <input type="" formControlName="author" [(ngModel)]="formValues[0]['author']" />
+    <label>Description</label>
+    <input type="text" formControlName="description" [(ngModel)]="formValues[0]['description']" />
+    <label>Published_date</label>
+    <input type="date" formControlName="published_date" [(ngModel)]="formValues[0]['published_date']" />
+    <label>Publisher</label>
+    <input type="text" formControlName="publisher" [(ngModel)]="formValues[0]['publisher']" />
+    <button type="submit">update</button>
+</form>

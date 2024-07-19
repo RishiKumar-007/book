@@ -1,0 +1,45 @@
+
+    <div class="container-lg">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h2>Books</h2>
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add
+                                New</button>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Isbn</th>
+                            <th>Author</th>
+                            <th>Description</th>
+                            <th>Publish date</th>
+                            <th>Publisher</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of tableData[0]">
+                            <td>{{item.title}}</td>
+                            <td>{{item.isbn}}</td>
+                            <td>{{item.author}}</td>
+                            <td>{{item.description}}</td>
+                            <td>{{item.published_date}}</td>
+                            <td>{{item.publisher}}</td>
+                                <td (click)="edit(item)"><i  class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </td>
+                                <td (click)="delete(item)"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
